@@ -1,7 +1,5 @@
-from Basemodel import Basemodel
 
-
-class User(Basemodel):
+class User:
     def __init__(self, user_id, first_name, last_name, password):
         
         self.user_id = user_id
@@ -14,18 +12,7 @@ class User(Basemodel):
         self.city = None
         self.country = None
 
-    def add_place(self, place):
-        self.places.append(place)
-        
-    def add_review(self, review):
-        self.reviews.append(review)
-        
-    def set_city(self, city):
-        self.city = city
-        
-    def set_country(self, country):
-        self.country = country
-        
+    
     
 
     

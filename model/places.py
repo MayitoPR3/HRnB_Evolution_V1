@@ -1,7 +1,6 @@
-from Basemodel import Basemodel
 
 
-class Places(Basemodel):
+class Places:
     
     def __init__(self, place_id, name, description, address, number_rooms, reviews, bathrooms, price, max_guests):
         self.set_owner = None
@@ -16,14 +15,4 @@ class Places(Basemodel):
         self.amenities = []
         self.reviews = []
         self.host_name = None
-      
-    def set_owner(self, owner):
-        self.set_owner = owner
-    
-    def add_review(self, review):
-        self.reviews.append(review)
-        
-    def add_amenity(self, amenities):
-        self.amenities.append(amenities)
-    
-    
+     

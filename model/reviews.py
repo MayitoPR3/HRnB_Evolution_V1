@@ -1,8 +1,5 @@
-from datetime import datetime
-from Basemodel import Basemodel
 
-
-class Reviews(Basemodel):
+class Reviews:
     def __init__(self, user_feedback, place_rating):
         
         self.user_feedback = user_feedback

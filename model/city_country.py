@@ -1,7 +1,5 @@
-from Basemodel import Basemodel
 
-
-class City(Basemodel):
+class City:
     def __init__(self, city_name, country, places):
 
         self.city_name = city_name
@@ -22,12 +20,6 @@ class Country(City):
         self.city_name = []
         self.places = []
         
-    def add_city(self, city):
-        self.city_name.append(city)
-        self.places.append(city)
-        
-    def add_place(self, place):
-        self.places.append(place)
-        
+ 
     
 
