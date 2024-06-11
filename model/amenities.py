@@ -7,3 +7,7 @@ class Amenities(Basemodel):
         super().__init__()
         self.name = name
         self.description = description
+
+    def __str__(self):
+        """returns a string representation of the review class"""
+        return f"[Amenities] ({self.id}) {self.to_dict()}"
