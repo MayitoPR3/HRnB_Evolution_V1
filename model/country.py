@@ -7,3 +7,7 @@ class Country(City):
         """initialize the country"""
         super().__init__()
         self.country_code = country_code
+
+    def __str__(self):
+        """returns a string representation of the review class"""
+        return f"[Country] ({self.id}) {self.to_dict()}"
