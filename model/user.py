@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from model.base_model import Basemodel
 
 
@@ -11,8 +12,8 @@ class User(Basemodel):
         self.last_name = last_name
         self.email = email
         self.password = password
-        self.places = []
-        self.reviews = []
+        self.place_name = []
+        self.comment = []
         
     def update_name(self, first_name="", last_name=""):
         """ defines the process to update the name"""
