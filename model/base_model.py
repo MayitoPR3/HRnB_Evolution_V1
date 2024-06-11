@@ -18,7 +18,9 @@ class Basemodel:
         self.updated_at = updated_at or datetime.now()
       
     def save(self):
+        """save the request"""
         self.updated_at = datetime.now()
 
     def to_dict(self):
+        """return a dict representation of the request"""
         return self.__dict__
