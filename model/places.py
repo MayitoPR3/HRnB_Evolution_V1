@@ -3,8 +3,10 @@ from model.base_model import Basemodel
 
 
 class Place(Basemodel):
-    
-    def __init__(self, place_name, place_description, place_address, number_rooms, number_of_bathrooms, price_per_night, max_guests, latitude, longitude):
+    """This class represents the Place object"""
+    def __init__(self, place_name, place_description, place_address, number_rooms, 
+                 number_of_bathrooms, price_per_night, max_guests, latitude, longitude):
+        """initialize the Place object"""
         super().__init__()  # Call the __init__ method of the BaseModel class
         self.place_name = place_name
         self.description = place_description
@@ -17,4 +19,5 @@ class Place(Basemodel):
         self.longitude = longitude
      
     def __str__(self):
+        """returns a string representation of this object"""
         return f"[Place] ({self.id}) {self.to_dict()}"

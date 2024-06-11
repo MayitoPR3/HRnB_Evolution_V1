@@ -12,5 +12,5 @@ class Review(Basemodel):
         self.rating = rating
 
     def __str__(self):
-        """defines the string method"""
+        """returns a string representation of the review class"""
         return f"[Review] ({self.id}) {self.to_dict()}"
