@@ -13,3 +13,5 @@ class City(Basemodel):
         self.city_name.append(city_name)
         self.place_name.append(city_name)
         
+    def __str__(self):
+        return f"[City] ({self.id}) {self.to_dict()}"
