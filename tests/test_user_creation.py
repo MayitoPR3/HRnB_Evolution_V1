@@ -5,20 +5,20 @@ from model.user import User
 
 class TestUser(unittest.TestCase):
     def test_created_at_and_updated_at(self):
-        # Create a new user
+        """test created_at and updated_at"""
         user = User(email="test@example.com", first_name="John", last_name="Doe", password=1234)
 
-        # Check if created_at and updated_at are set
+        """check created_at and updated at are set"""
         self.assertIsInstance(user.created_at, datetime)
         self.assertIsInstance(user.updated_at, datetime)
 
-        # Ensure created_at and updated_at are equal initially
+        """check created_at and updated_at are equal initially"""
         self.assertAlmostEqual(user.created_at.timestamp(), user.updated_at.timestamp(), delta=0.01)
 
-        # Update user's information
+        """update user information"""
         user.first_name = "Jane"
 
-        # Check if updated_at has been updated
+        """check if updated_at is updated"""
         self.assertNotEqual(user.created_at, user.updated_at)
 
 
