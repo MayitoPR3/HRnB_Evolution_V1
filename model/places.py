@@ -1,18 +1,19 @@
+from model.base_model import Basemodel
 
 
-class Places:
+class Place(Basemodel):
     
-    def __init__(self, place_id, name, description, address, number_rooms, reviews, bathrooms, price, max_guests):
-        self.set_owner = None
-        self.place_id = place_id
+    def __init__(self, name, description, address, number_rooms, number_of_bathrooms, price_per_night, max_guests, latitude, longitude):
+        super().__init__()  # Call the __init__ method of the BaseModel class
         self.name = name
         self.description = description
         self.address = address
         self.number_rooms = number_rooms
-        self.bathrooms = bathrooms
-        self.price = price
+        self.number_of_bathrooms = number_of_bathrooms
+        self.price_per_night = price_per_night
         self.max_guests = max_guests
-        self.amenities = []
-        self.reviews = []
-        self.host_name = None
+        self.latitude = latitude
+        self.longitude = longitude
      
+    def __str__(self):
+        return f"[Place] ({self.id}) {self.to_dict()}"
