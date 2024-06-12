@@ -56,11 +56,3 @@ class FileStorage:
         except FileNotFoundError:
             pass
 
-# tests
-file_storage = FileStorage()
-data_manager = DataManager(file_storage)
-
-entity = {"id": 1, "type": "test_entity", "name": "Example Entity"}
-data_manager.save(entity)
-retrieved_entity = data_manager.get(1, "example_entity")
-print(retrieved_entity)
