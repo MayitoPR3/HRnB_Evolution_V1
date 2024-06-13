@@ -1,13 +1,10 @@
-#!/usr/bin/python3
-from model.city import City
+from base_model import BaseModel
 
-class Country(City):
-    """this is a country class that represents a country"""
-    def __init__(self, country_code):
-        """initialize the country"""
+class Country(BaseModel):
+    def __init__(self, name, country_code):
         super().__init__()
+        self.name = name
         self.country_code = country_code
 
     def __str__(self):
-        """returns a string representation of the review class"""
-        return f"[Country] ({self.id}) {self.to_dict()}"
+        return f"Country({self.id}): {self.name}, Code: {self.country_code}"
