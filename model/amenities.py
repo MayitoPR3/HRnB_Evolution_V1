@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-from model.base_model import Basemodel
+from base_model import BaseModel
 
-class Amenities(Basemodel):
+
+class Amenity(BaseModel):
     """this class represents the Amenities"""
     def __init__(self, name, description):
         super().__init__()

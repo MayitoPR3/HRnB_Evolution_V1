@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-from model.base_model import Basemodel
+from base_model import BaseModel
 
 
-class Review(Basemodel):
+class Review(BaseModel):
     """class for Reviews
     """
     def __init__(self, comment, rating):

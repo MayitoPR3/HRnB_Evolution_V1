@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-from model.base_model import Basemodel
+from base_model import BaseModel
 
 
-class Place(Basemodel):
+class Place(BaseModel):
     """This class represents the Place object"""
     def __init__(self, place_name, place_description, place_address, number_rooms, 
                  number_of_bathrooms, price_per_night, max_guests, latitude, longitude):

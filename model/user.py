@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-from model.base_model import Basemodel
+from base_model import BaseModel
 
 
-class User(Basemodel):
+class User(BaseModel):
     """class for the User
     """
-    def __init__(self, email, password, first_name="", last_name="", **kwargs):
+    def __init__(self, email, password, first_name="", last_name=""):
         """initializes the function of user information"""
-        super().__init__(**kwargs)
+        super().__init__()
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
