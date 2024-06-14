@@ -6,7 +6,9 @@ from flask import request
 from flask_restx import Resource, fields, Namespace
 from datamanagment import DataManager
 from model.city import City
+import datetime
 
+data_manager = DataManager()
 
 ns = Namespace('models', description='Model operations')
 

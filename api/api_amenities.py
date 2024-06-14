@@ -37,7 +37,7 @@ class AmenitiesResource(Resource):
         new_amenity_data = request.json
         if data_manager.check_amenity_name_exists(new_amenity_data['name']):
             ns.abort(409, 'Amenity name already exists')
-        new_amenity = Amenities(**new_amenity_data)
+        new_amenity = Amenity(**new_amenity_data)
         data_manager.save_amenity(new_amenity.to_dict())
         return {'message': 'Amenity created successfully', 'amenity_id': new_amenity.id}, 201
 
